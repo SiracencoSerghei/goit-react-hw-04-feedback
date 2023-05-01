@@ -3,7 +3,16 @@ import PropTypes from "prop-types";
 import "./Notification.css";
 
 const Notification = ({ message }) => {
-  return <p className="my-text">{message}</p>;
+  return (
+    <div  className="message">
+      {message.split(" ").map((word, index) => (
+        <span key={index}>
+          {word}
+          {index !== message.split(" ").length - 1 && " "}
+        </span>
+      ))}
+    </div>
+  );
 };
 
 Notification.propTypes = {

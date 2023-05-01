@@ -1,17 +1,33 @@
-@keyframes wave {
-    0% {
-      transform: translateX(0) translateZ(0) scaleY(1);
-    }
-    50% {
-      transform: translateX(30%) translateZ(0) scaleY(0.5);
-    }
-    100% {
-      transform: translateX(200%) translateZ(0) scaleY(1);
-    }
-  }
 
-/* красный цвет текста и тряска анимация */
-.my-text {
-  color: red;
-  animation: wave 3.5s infinite;
-}
+   .message {
+	display: flex;
+	flex-wrap: wrap;
+	color: red;
+  }
+  
+  .message span {
+	margin-right: 0.5rem;
+	font-size: 1.5rem;
+	display: inline-block;
+	animation: rotate 2s linear 3;
+  }
+  
+  @keyframes rotate {
+	0% {
+	  transform: rotateY(0deg);
+	  color: red;
+	}
+	25% {
+		color: rgba(255, 242, 0, 0.937);
+	  }
+	 50% {
+		color: rgba(255, 242, 0, 0.937);
+	  }
+	  75% {
+		color: red;
+	  }
+	100% {
+	  transform: rotateY(360deg);
+	}
+  }
+  
