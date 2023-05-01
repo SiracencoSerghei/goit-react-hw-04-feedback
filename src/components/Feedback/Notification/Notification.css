@@ -1,0 +1,17 @@
+@keyframes wave {
+    0% {
+      transform: translateX(0) translateZ(0) scaleY(1);
+    }
+    50% {
+      transform: translateX(30%) translateZ(0) scaleY(0.5);
+    }
+    100% {
+      transform: translateX(200%) translateZ(0) scaleY(1);
+    }
+  }
+
+/* красный цвет текста и тряска анимация */
+.my-text {
+  color: red;
+  animation: wave 3.5s infinite;
+}
